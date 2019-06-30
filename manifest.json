@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "Lin9 Me Share",
+    "version": "0.0.1",
+    "description": "Shorten and share current web page URL",
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+      "tabs"
+    ],
+    "icons" : {
+      "128": "icon.png"
+    }
+}
