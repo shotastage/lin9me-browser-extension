@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+
+body {
+    width: 400px;
+    margin: 0px;
+    background-color: transparent !important;
+    background: transparent !important;
+    min-width: 357px;
+    overflow-x: hidden;
+    font-family: "Helvetica Neue",Helvetica,"Hiragino Kaku Gothic Pro","Lucida Grande",Verdana,Arial,Meiryo,"メイリオ",sans-serif;
+}
+
+.container {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+
+    width: 400px;
+    height: 100vh;
+    margin: 0px;
+    background: pink;
+    min-width: 357px;
+    border-radius: 10px !important;
+}
+
+h1 {
+    margin: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 2rem;
+}
