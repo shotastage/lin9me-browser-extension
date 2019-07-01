@@ -5,6 +5,11 @@ chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT}
 
         var currentURL = tabs[0].url;
 
+        if (currentURL.match(/^(https?)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)$/) === null) {
+            dispArea.innerText = "このページは短縮できません";
+            return
+        }
+
         getShortenedURL(currentURL);
     }
 );
