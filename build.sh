@@ -25,5 +25,27 @@ function build_firefox() {
     zip -r ./dist/lin9me-ext-firefox.zip $FF_BASE
 }
 
+
+
+function build_chrome() {
+
+    CH_BASE="./dist/chrome"
+
+    echo $CH_BASE
+
+    if [ -e $CH_BASE ]; then
+        rm -rf $CH_BASE
+    fi
+
+    mkdir -p $CH_BASE
+    cp manifest.json $CH_BASE/manifest.json
+    cp popup.js $CH_BASE/popup.js
+    cp icon.png $CH_BASE/icon.png
+    cp -r ./build/ $CH_BASE/build/
+
+    zip -r ./dist/lin9me-ext-chrome.zip $CH_BASE
+}
+
 compile
 build_firefox
+build_chrome

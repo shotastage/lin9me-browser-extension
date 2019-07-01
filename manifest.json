@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Lin9 Me URL Shortener",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Shorten and share current web page URL",
     "browser_action": {
         "default_popup": "./build/popup.html",
