@@ -12,7 +12,7 @@ chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT}
         if (currentURL.match(/^(https?)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)$/) === null) {
             loading.classList.add("invisible");
             message.classList.remove("invisible");
-            message.innerText = "このページは短縮できません. Chromeの設定ページもしくは, HTTPプロトコルでない可能性があります."
+            message.innerText = createErrorMessage(currentURL);
             return
         }
 
@@ -49,4 +49,37 @@ function saveToClipboard(str) {
     textArea.select();
     document.execCommand("copy");
     document.body.removeChild(textArea);
+}
+
+
+function createErrorMessage(currentURL) {
+    let ua = navigator.userAgent;
+
+    var browser = "Chrome";
+
+    if ( ua.match("Edg")) {
+        browser = "Microsoft Edge";
+    }
+
+    if (currentURL.match("ftp://")) {
+        return "FTPプロトコルのURLは共有することができません. HTTP/HTTPSから始まるURLにしてください.";
+    }
+
+    if (currentURL.match("file://")) {
+        return "ローカルファイルへのリンクは許可されていません.Webサイトのリンクにしてください.";
+    }
+
+    if (currentURL.match("chrome://settings/")) {
+        return "これはChromeの設定ページです. Webサイトではありません.";
+    }
+
+    if (currentURL.match("chrome://extensions/")) {
+        return "これはChromeの拡張機能管理画面です. Webサイトではありません.";
+    }
+
+    if (currentURL.match("chrome://newtab")) {
+        return "これはChrome新しいタブです. Google検索ページのリンクを共有する場合はhttps://google.comにアクセスしてください.";
+    }
+
+    return "このページは短縮できません." + browser + "の設定ページもしくは, HTTPプロトコルでない可能性があります.";
 }
