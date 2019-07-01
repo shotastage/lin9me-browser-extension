@@ -1,0 +1,13 @@
+{
+  "name": "lin9me-chrome-extension",
+  "version": "0.0.1",
+  "description": "Chrome extension",
+  "main": "index.js",
+  "repository": "git@github.com:shotastage/lin9me-chrome-extension.git",
+  "author": "Shota Shimazu <hornet.live.mf@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
