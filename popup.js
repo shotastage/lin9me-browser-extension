@@ -4,6 +4,8 @@ let loading = document.getElementById("loading");
 
 let message = document.getElementById("message");
 
+let accessCount = document.getElementById("access_count");
+
 chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
     function(tabs) {
 
@@ -33,7 +35,12 @@ function getShortenedURL(current) {
             message.classList.remove("invisible");
             dispArea.classList.remove("invisible");
             dispArea.innerText = json.shorten;
-            saveToClipboard(json.shorten);
+
+            if (json.count !== 0) {
+                accessCount.classList.remove("invisible");
+                accessCount.innerText = "このリンクは" + json.count + "回アクセスされています.";
+                saveToClipboard(json.shorten);
+            }
         }
     };
     var data = JSON.stringify({"origin": current});
