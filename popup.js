@@ -69,6 +69,14 @@ function createErrorMessage(currentURL) {
         return "ローカルファイルへのリンクは許可されていません.Webサイトのリンクにしてください.";
     }
 
+    if (currentURL.match("ssh://")) {
+        return "SSHはリモートコンピューターにアクセスするプロトコルです. Webサイトのリンクではありません."
+    }
+
+    if (currentURL.match("telnet://")) {
+        return "Telnetはリモートコンピューターにアクセスするプロトコルです. Webサイトのリンクではありません."
+    }
+
     if (currentURL.match("chrome://settings/")) {
         return "これはChromeの設定ページです. Webサイトではありません.";
     }
@@ -80,6 +88,7 @@ function createErrorMessage(currentURL) {
     if (currentURL.match("chrome://newtab")) {
         return "これはChrome新しいタブです. Google検索ページのリンクを共有する場合はhttps://google.comにアクセスしてください.";
     }
+
 
     return "このページは短縮できません." + browser + "の設定ページもしくは, HTTPプロトコルでない可能性があります.";
 }
