@@ -99,16 +99,16 @@ function createErrorMessage(currentURL) {
         return "Telnetはリモートコンピューターにアクセスするプロトコルです. Webサイトのリンクではありません."
     }
 
-    if (currentURL.match("chrome://settings/")) {
-        return "これはChromeの設定ページです. Webサイトではありません.";
+    if (currentURL.match("chrome://settings/") || currentURL.match("edge://settings/")) {
+        return "これは" + browser + "の設定ページです. Webサイトではありません.";
     }
 
-    if (currentURL.match("chrome://extensions/")) {
-        return "これはChromeの拡張機能管理画面です. Webサイトではありません.";
+    if (currentURL.match("chrome://extensions/") || currentURL.match("edge://extensions/")) {
+        return "これは" + browser + "の拡張機能管理画面です. Webサイトではありません.";
     }
 
-    if (currentURL.match("chrome://newtab")) {
-        return "これはChrome新しいタブです. Google検索ページのリンクを共有する場合はhttps://google.comにアクセスしてください.";
+    if (currentURL.match("chrome://newtab") || currentURL.match("edge://newtab")) {
+        return "これは" + browser +  "新しいタブです. Google検索ページのリンクを共有する場合はhttps://google.comにアクセスしてください.";
     }
 
 
