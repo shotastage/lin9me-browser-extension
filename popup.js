@@ -39,8 +39,9 @@ function getShortenedURL(current) {
             if (json.count !== 0) {
                 accessCount.classList.remove("invisible");
                 accessCount.innerText = "このリンクは" + json.count + "回アクセスされています.";
-                saveToClipboard(json.shorten);
             }
+
+            saveToClipboard(json.shorten);
         }
     };
     var data = JSON.stringify({"origin": current});
