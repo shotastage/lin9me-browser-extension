@@ -75,6 +75,14 @@ function createErrorMessage(currentURL) {
         browser = "Microsoft Edge";
     }
 
+    if ( ua.match("Edg")) {
+        browser = "Microsoft Edge";
+    }
+
+    if ( ua.match("OPR")) {
+        browser = "Opera";
+    }
+
     if (currentURL.match("ftp://")) {
         return "FTPプロトコルのURLは共有することができません. HTTP/HTTPSから始まるURLにしてください.";
     }
