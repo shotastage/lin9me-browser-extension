@@ -99,7 +99,7 @@ function createErrorMessage(currentURL) {
         return "Telnetはリモートコンピューターにアクセスするプロトコルです. Webサイトのリンクではありません."
     }
 
-    if (currentURL.match("chrome://settings/") || currentURL.match("edge://settings/")) {
+    if (currentURL.match("chrome://settings/") || currentURL.match("edge://settings/") || currentURL.match("opera://settings/")) {
         return "これは" + browser + "の設定ページです. Webサイトではありません.";
     }
 
