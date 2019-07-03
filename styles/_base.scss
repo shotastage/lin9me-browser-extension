@@ -54,6 +54,23 @@ h1 {
     color: white;
 }
 
+#message {
+    position: absolute;
+    color: #fff;
+    bottom: -19px;
+    width: 100%;
+    text-align: center;
+
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .8s ease 0s;
+    z-index: 0;
+    &.is-active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
 #access_count {
     color: #fff;
 }

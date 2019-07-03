@@ -32,7 +32,13 @@ function getShortenedURL(current) {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var json = JSON.parse(xhr.responseText);
             loading.classList.add("invisible");
-            message.classList.remove("invisible");
+
+            message.classList.add("is-active");
+            setTimeout(function (){
+                message.classList.remove("is-active");
+            }, 2000);
+
+
             dispArea.classList.remove("invisible");
             dispArea.innerText = json.shorten;
 
