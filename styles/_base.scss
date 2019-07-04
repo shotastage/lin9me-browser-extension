@@ -56,9 +56,10 @@ h1 {
 
 #message {
     position: absolute;
+    z-index: 20;
     color: #fff;
-    bottom: -19px;
-    width: 100%;
+    bottom: -5px;
+    width: 400px;
     text-align: center;
 
     pointer-events: none;

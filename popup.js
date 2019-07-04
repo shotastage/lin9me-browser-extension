@@ -13,7 +13,9 @@ chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT}
 
         if (currentURL.match(/^(https?)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)$/) === null) {
             loading.classList.add("invisible");
-            message.classList.remove("invisible");
+            dispArea.classList.remove("invisible");
+            dispArea.innerText = currentURL;
+            message.classList.add("is-active");
             message.innerText = createErrorMessage(currentURL);
             return
         }
@@ -108,7 +110,7 @@ function createErrorMessage(currentURL) {
     }
 
     if (currentURL.match("chrome://newtab") || currentURL.match("edge://newtab")) {
-        return "これは" + browser +  "新しいタブです. Google検索ページのリンクを共有する場合はhttps://google.comにアクセスしてください.";
+        return "これは" + browser +  "の新しいタブです. Google検索ページのリンクを共有する場合はhttps://google.comにアクセスしてください.";
     }
 
 
