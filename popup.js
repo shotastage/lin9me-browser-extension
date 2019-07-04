@@ -86,7 +86,7 @@ function createErrorMessage(currentURL) {
     }
 
     if (currentURL.match("ftp://")) {
-        return "FTPプロトコルのURLは共有することができません. HTTP/HTTPSから始まるURLにしてください.";
+        return "FTPリンクは次のバージョンでサポートされます.アップデートまでお待ちください.";
     }
 
     if (currentURL.match("file://")) {
