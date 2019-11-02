@@ -27,7 +27,7 @@ chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT}
 
 function getShortenedURL(current) {
     var xhr = new XMLHttpRequest();
-    var url = "https://lin9.me/shorten_link";
+    var url = "https://2oo.pw/shorten_link";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onreadystatechange = function () {

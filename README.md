@@ -1,3 +1,3 @@
-# Lin9.me Chrome Extension
+# 2oo Share Chrome Extension
 
-Official Chrome Extension for shortening URL via lin9.me.
+Official Chrome Extension for shortening URL via 2oo.pw.

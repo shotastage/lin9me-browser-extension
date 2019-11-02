@@ -3,7 +3,7 @@
     "name": "Lin9 Me URL Shortener",
     "version": "0.0.2",
     "description": "Shorten and share current web page URL",
-    "homepage_url": "https://lin9.me",
+    "homepage_url": "https://2oo.pw",
     "default_locale": "ja",
     "browser_action": {
         "default_title": "Lin9 Shortener",
