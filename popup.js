@@ -1,10 +1,7 @@
 let dispArea = document.getElementById("shortened_url");
-
-let loading = document.getElementById("loading");
-
-let message = document.getElementById("message");
-
-let accessCount = document.getElementById("access_count");
+    loading = document.getElementById("loading");
+    message = document.getElementById("message");
+    accessCount = document.getElementById("access_count");
 
 chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
     function(tabs) {
@@ -86,7 +83,7 @@ function createErrorMessage(currentURL) {
     }
 
     if (currentURL.match("ftp://")) {
-        return "FTPリンクは次のバージョンでサポートされます.アップデートまでお待ちください.";
+        return "FTPリンクは作成できません. HTTPリンクにしてください.";
     }
 
     if (currentURL.match("file://")) {

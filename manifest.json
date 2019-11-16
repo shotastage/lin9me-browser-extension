@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "2oo Share URL Shortener",
-    "version": "0.1.1",
+    "name": "2ooU! Link Share",
+    "version": "0.1.2",
     "description": "Shorten and share current web page URL",
     "browser_action": {
         "default_popup": "./build/popup.html",
